@@ -40,7 +40,7 @@ public final class beranda_jsp extends org.apache.jasper.runtime.HttpJspBase
   private static java.util.List<String> _jspx_dependants;
 
   static {
-    _jspx_dependants = new java.util.ArrayList<String>(10);
+    _jspx_dependants = new java.util.ArrayList<String>(14);
     _jspx_dependants.add("/home.jsp");
     _jspx_dependants.add("/barang.jsp");
     _jspx_dependants.add("/supplier.jsp");
@@ -51,6 +51,10 @@ public final class beranda_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_dependants.add("/retur.jsp");
     _jspx_dependants.add("/pembelian.jsp");
     _jspx_dependants.add("/product.jsp");
+    _jspx_dependants.add("/A30.jsp");
+    _jspx_dependants.add("/M30S.jsp");
+    _jspx_dependants.add("/Note9.jsp");
+    _jspx_dependants.add("/Zflip.jsp");
   }
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
@@ -747,6 +751,22 @@ String nof = "FK" + no.substring(2);
           out.write("\r\n");
           out.write("                                ");
           if (_jspx_meth_c_when_8((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_choose_0, _jspx_page_context))
+            return;
+          out.write("\r\n");
+          out.write("                                ");
+          if (_jspx_meth_c_when_9((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_choose_0, _jspx_page_context))
+            return;
+          out.write("\r\n");
+          out.write("                                ");
+          if (_jspx_meth_c_when_10((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_choose_0, _jspx_page_context))
+            return;
+          out.write("\r\n");
+          out.write("                                ");
+          if (_jspx_meth_c_when_11((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_choose_0, _jspx_page_context))
+            return;
+          out.write("\r\n");
+          out.write("                                ");
+          if (_jspx_meth_c_when_12((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_choose_0, _jspx_page_context))
             return;
           out.write("\r\n");
           out.write("                                ");
@@ -1969,22 +1989,25 @@ String nof = "FK" + no.substring(2);
         out.write("        <img src=\"image/A30.png\" alt=\"Samsung Galaxy A30\">\r\n");
         out.write("            <h4>Samsung Galaxy A30</h4>\r\n");
         out.write("            <h5>Rp 3.000.000,-</h5>\r\n");
-        out.write("            <a href=\"beranda.jsp?halaman=A30.jsp\">Detail</a></li>\r\n");
+        out.write("            <a href=\"beranda.jsp?halaman=A30\">Detail</a>\r\n");
         out.write("    </div>\r\n");
         out.write("        <div class=\"list-produk\">\r\n");
         out.write("            <img src=\"image/A50.png\" alt=\"Samsung Galaxy A50\">\r\n");
         out.write("            <h4>Samsung Galaxy M30S</h4>\r\n");
         out.write("            <h5>Rp 3.700.000,-</h5>\r\n");
+        out.write("            <a href=\"beranda.jsp?halaman=M30S\">Detail</a>\r\n");
         out.write("    </div>\r\n");
         out.write("        <div class=\"list-produk\">\r\n");
         out.write("            <img src=\"image/A50S.png\" alt=\"Samsung Galaxy A50S\">\r\n");
-        out.write("            <h4>Samsung Galaxy Note</h4>\r\n");
+        out.write("            <h4>Samsung Galaxy Note 9</h4>\r\n");
         out.write("            <h5>Rp 8.000.000,-</h5>\r\n");
+        out.write("            <a href=\"beranda.jsp?halaman=Note9\">Detail</a>\r\n");
         out.write("    </div>\r\n");
         out.write("        <div class=\"list-produk\">\r\n");
         out.write("            <img src=\"image/A70.png\" alt=\"Samsung Galaxy A70\">\r\n");
         out.write("            <h4>Samsung Galaxy Z Flip</h4>\r\n");
         out.write("            <h5>Rp 20.000.000,-</h5> \r\n");
+        out.write("            <a href=\"beranda.jsp?halaman=Zflip\">Detail</a>\r\n");
         out.write("    </body>\r\n");
         out.write("</html>\r\n");
         out.write("\r\n");
@@ -1999,6 +2022,242 @@ String nof = "FK" + no.substring(2);
       return true;
     }
     _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_8);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_when_9(javax.servlet.jsp.tagext.JspTag _jspx_th_c_choose_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:when
+    org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_when_9 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _jspx_tagPool_c_when_test.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
+    _jspx_th_c_when_9.setPageContext(_jspx_page_context);
+    _jspx_th_c_when_9.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_choose_0);
+    _jspx_th_c_when_9.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.halaman=='A30'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_when_9 = _jspx_th_c_when_9.doStartTag();
+    if (_jspx_eval_c_when_9 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\r\n");
+        out.write("                                ");
+        out.write("<p style=\"text-align:justify;\">\r\n");
+        out.write("    <img src=\"image/A30.png\" alt=\"Samsung Galaxy A30\">\r\n");
+        out.write("    <br>\r\n");
+        out.write("<p style=\"text-align: center; font-size: 20px;\">\r\n");
+        out.write("    Samsung galaxy A30\r\n");
+        out.write("    <br>\r\n");
+        out.write("    Rp 3.000.000,\r\n");
+        out.write("    <br>\r\n");
+        out.write("    <br>\r\n");
+        out.write("<p style=\"text-align: left; font-size: 15px;\">\r\n");
+        out.write("    Spesifikasi\r\n");
+        out.write("    <br>\r\n");
+        out.write("    Layar: 6.4 inch.\r\n");
+        out.write("    Resolusi layar: 720 x 1560 pixels, 19.5:9 ratio (~268 ppi density).\r\n");
+        out.write("    Chipset: Exynos 7904 (14 nm).\r\n");
+        out.write("    OS: Android 9.0 (Pie), upgradable to Android 10, One UI 2.0.\r\n");
+        out.write("    CPU: Octa-core (2x1.8 GHz Cortex-A73 & 6x1.6 GHz Cortex-A53).\r\n");
+        out.write("    GPU: Mali-G71 MP2.\r\n");
+        out.write("    Memori internal: 32GB 3GB RAM, 64GB 4GB RAM, 128GB 4GB RAM.\r\n");
+        out.write("    Memori Eksternal: microSDXC.\r\n");
+        out.write("    SIM card: Dual SIM (Nano-SIM, dual stand-by).\r\n");
+        out.write("    Berat: 169 gram.\r\n");
+        out.write("    Kamera Belakang: triple kamera 25 MP, f/1.7, 27mm (wide), PDAF; 8 MP, f/2.2, 13mm (ultrawide), 1/4.0\", 1.12µm; 5 MP, f/2.2, (depth).\r\n");
+        out.write("    Kamera Depan: 16 MP, f/2.0, 26mm (wide), 1/3.1\", 1.0µm.\r\n");
+        out.write("    Baterai: Non-removable Li-Po 4000 mAh.\r\n");
+        out.write("    Jack earphone: 3,5mm audio jack.\r\n");
+        out.write("    Varian warna: Prism Crush Black, Prism Crush White, Prism Crush Green, Prism Crush Violet.\r\n");
+        out.write("    <br>\r\n");
+        out.write("    <br>\r\n");
+        out.write("<p style=\"text-align: center; font-size: 20px;\">\r\n");
+        out.write("<tr>\r\n");
+        out.write("    <td colspan=\"3\"><button class=\"btn\"><a href=\"beranda.jsp?halaman=pesan\">add to order now</a></button></tr>\r\n");
+        out.write("<p style=\"text-align: center; font-size: 20px;\">\r\n");
+        out.write("<tr>\r\n");
+        out.write("    <td colspan=\"3\"><a href=\"beranda.jsp?halaman=Product.jsp\">Kembali</a></td>\r\n");
+        out.write("<tr>\r\n");
+        out.write("\r\n");
+        out.write("\r\n");
+        out.write("                                ");
+        int evalDoAfterBody = _jspx_th_c_when_9.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_when_9.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_9);
+      return true;
+    }
+    _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_9);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_when_10(javax.servlet.jsp.tagext.JspTag _jspx_th_c_choose_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:when
+    org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_when_10 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _jspx_tagPool_c_when_test.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
+    _jspx_th_c_when_10.setPageContext(_jspx_page_context);
+    _jspx_th_c_when_10.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_choose_0);
+    _jspx_th_c_when_10.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.halaman=='M30S'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_when_10 = _jspx_th_c_when_10.doStartTag();
+    if (_jspx_eval_c_when_10 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\r\n");
+        out.write("                                ");
+        out.write("<p style=\"text-align:justify;\">\n");
+        out.write("    <img src=\"image/A50.png\" alt=\"Samsung Galaxy A50\">\n");
+        out.write("    <br>\n");
+        out.write("<p style=\"text-align: center; font-size: 20px;\">\n");
+        out.write("    Samsung galaxy M30S\n");
+        out.write("    <br>\n");
+        out.write("    Rp 3.700.000,\n");
+        out.write("    <br>\n");
+        out.write("    <br>\n");
+        out.write("<p style=\"text-align: left; font-size: 15px;\">\n");
+        out.write("    Spesifikasi\n");
+        out.write("    <br>\n");
+        out.write("Layar: 6.4 inch.\n");
+        out.write("Resolusi layar: 1080 x 2340 pixels, 19.5:9 ratio (~403 ppi density).\n");
+        out.write("Chipset: Exynos 9611 (10nm).\n");
+        out.write("OS: Android 9.0 (Pie), One UI.\n");
+        out.write("CPU: Octa-core (4x2.3 GHz Cortex-A73 & 4x1.7 GHz Cortex-A53).\n");
+        out.write("GPU: Mali-G72 MP3.\n");
+        out.write("Memori internal: 64GB 4GB RAM, 128GB 4GB RAM, 128GB 6GB RAM.\n");
+        out.write("Memori Eksternal: microSDXC.\n");
+        out.write("SIM card: Dual SIM (Nano-SIM, dual stand-by).\n");
+        out.write("Berat: 188 gram.\n");
+        out.write("Kamera Belakang: triple kamera 48 MP, f/2.0, 26mm (wide), 1/2.0\", 0.8µm, PDAF; 8 MP, f/2.2, 12mm (ultrawide), 1/4.0\", 1.12µm; 5 MP, f/2.2, (depth).\n");
+        out.write("Kamera Depan: 16 MP, f/2.0, 26mm (wide), 1/3.1\", 1.0µm.\n");
+        out.write("Baterai: Non-removable Li-Po 6000 mAh.\n");
+        out.write("Jack earphone: 3,5mm audio jack.\n");
+        out.write("Varian warna: Opal Black, Sapphire Blue, Pearl White.\n");
+        out.write("    <br>\n");
+        out.write("    <br>\n");
+        out.write("<p style=\"text-align: center; font-size: 20px;\">\n");
+        out.write("<tr>\n");
+        out.write("    <td colspan=\"3\"><button class=\"btn\"><a href=\"beranda.jsp?halaman=pesan\">add to order now</a></button></tr>\n");
+        out.write("<p style=\"text-align: center; font-size: 20px;\">\n");
+        out.write("<tr>\n");
+        out.write("    <td colspan=\"3\"><a href=\"beranda.jsp?halaman=Product.jsp\">Kembali</a></td>\n");
+        out.write("<tr>\n");
+        out.write("\n");
+        out.write("\r\n");
+        out.write("                                ");
+        int evalDoAfterBody = _jspx_th_c_when_10.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_when_10.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_10);
+      return true;
+    }
+    _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_10);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_when_11(javax.servlet.jsp.tagext.JspTag _jspx_th_c_choose_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:when
+    org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_when_11 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _jspx_tagPool_c_when_test.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
+    _jspx_th_c_when_11.setPageContext(_jspx_page_context);
+    _jspx_th_c_when_11.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_choose_0);
+    _jspx_th_c_when_11.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.halaman=='Note9'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_when_11 = _jspx_th_c_when_11.doStartTag();
+    if (_jspx_eval_c_when_11 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\r\n");
+        out.write("                                ");
+        out.write("<p style=\"text-align:justify;\">\n");
+        out.write("    <img src=\"image/A50S.png\" alt=\"Samsung Galaxy A50S\">\n");
+        out.write("    <br>\n");
+        out.write("<p style=\"text-align: center; font-size: 20px;\">\n");
+        out.write("    Samsung galaxy Note 9\n");
+        out.write("    <br>\n");
+        out.write("    Rp 8.000.000,\n");
+        out.write("    <br>\n");
+        out.write("    <br>\n");
+        out.write("<p style=\"text-align: left; font-size: 15px;\">\n");
+        out.write("    Spesifikasi\n");
+        out.write("    <br>\n");
+        out.write("Samsung Galaxy Note 9 merupakan handphone HP dengan kapasitas 4000mAh dan layar 6.4\" yang dilengkapi dengan kamera belakang 12 + 12MP dengan tingkat densitas piksel sebesar 514ppi dan tampilan resolusi sebesar 1440 x 2960pixels. Dengan berat sebesar 201g, handphone HP ini memiliki prosesor Octa Core. Tanggal rilis untuk Samsung Galaxy Note 9: September 2018.\n");
+        out.write("    <br>\n");
+        out.write("    <br>\n");
+        out.write("<p style=\"text-align: center; font-size: 20px;\">\n");
+        out.write("<tr>\n");
+        out.write("    <td colspan=\"3\"><button class=\"btn\"><a href=\"beranda.jsp?halaman=pesan\">add to order now</a></button></tr>\n");
+        out.write("<p style=\"text-align: center; font-size: 20px;\">\n");
+        out.write("<tr>\n");
+        out.write("    <td colspan=\"3\"><a href=\"beranda.jsp?halaman=Product.jsp\">Kembali</a></td>\n");
+        out.write("<tr>\n");
+        out.write("\n");
+        out.write("\r\n");
+        out.write("                                ");
+        int evalDoAfterBody = _jspx_th_c_when_11.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_when_11.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_11);
+      return true;
+    }
+    _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_11);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_when_12(javax.servlet.jsp.tagext.JspTag _jspx_th_c_choose_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:when
+    org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_when_12 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _jspx_tagPool_c_when_test.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
+    _jspx_th_c_when_12.setPageContext(_jspx_page_context);
+    _jspx_th_c_when_12.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_choose_0);
+    _jspx_th_c_when_12.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.halaman=='Zflip'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_when_12 = _jspx_th_c_when_12.doStartTag();
+    if (_jspx_eval_c_when_12 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\r\n");
+        out.write("                                ");
+        out.write("<p style=\"text-align:justify;\">\n");
+        out.write("    <img src=\"image/A70.png\" alt=\"Samsung Galaxy A70\">\n");
+        out.write("    <br>\n");
+        out.write("<p style=\"text-align: center; font-size: 20px;\">\n");
+        out.write("    Samsung Galaxy Z Flip\n");
+        out.write("    <br>\n");
+        out.write("    Rp 20.000.000,\n");
+        out.write("    <br>\n");
+        out.write("    <br>\n");
+        out.write("<p style=\"text-align: left; font-size: 15px;\">\n");
+        out.write("    Spesifikasi\n");
+        out.write("    <br>\n");
+        out.write("    Samsung Galaxy Z Flip merupakan handphone HP dengan kapasitas 3300mAh dan layar 6.7\" yang dilengkapi dengan kamera belakang 12 + 12MP dengan tingkat densitas piksel sebesar 425ppi dan tampilan resolusi sebesar 1080 x 2636pixels. Dengan berat sebesar 183g, handphone HP ini memiliki prosesor Octa Core. Tanggal rilis untuk Samsung Galaxy Z Flip: Februari 2020.\n");
+        out.write("<br>\n");
+        out.write("    <br>\n");
+        out.write("<p style=\"text-align: center; font-size: 20px;\">\n");
+        out.write("<tr>\n");
+        out.write("    <td colspan=\"3\"><button class=\"btn\"><a href=\"beranda.jsp?halaman=pesan\">add to order now</a></button></tr>\n");
+        out.write("<p style=\"text-align: center; font-size: 20px;\">\n");
+        out.write("<tr>\n");
+        out.write("    <td colspan=\"3\"><a href=\"beranda.jsp?halaman=Product.jsp\">Kembali</a></td>\n");
+        out.write("<tr>\n");
+        out.write("\n");
+        out.write("\r\n");
+        out.write("                                ");
+        int evalDoAfterBody = _jspx_th_c_when_12.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_when_12.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_12);
+      return true;
+    }
+    _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_12);
     return false;
   }
 

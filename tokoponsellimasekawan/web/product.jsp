@@ -14,21 +14,24 @@
         <img src="image/A30.png" alt="Samsung Galaxy A30">
             <h4>Samsung Galaxy A30</h4>
             <h5>Rp 3.000.000,-</h5>
-            <a href="beranda.jsp?halaman=A30.jsp">Detail</a></li>
+            <a href="beranda.jsp?halaman=A30">Detail</a>
     </div>
         <div class="list-produk">
             <img src="image/A50.png" alt="Samsung Galaxy A50">
             <h4>Samsung Galaxy M30S</h4>
             <h5>Rp 3.700.000,-</h5>
+            <a href="beranda.jsp?halaman=M30S">Detail</a>
     </div>
         <div class="list-produk">
             <img src="image/A50S.png" alt="Samsung Galaxy A50S">
-            <h4>Samsung Galaxy Note</h4>
+            <h4>Samsung Galaxy Note 9</h4>
             <h5>Rp 8.000.000,-</h5>
+            <a href="beranda.jsp?halaman=Note9">Detail</a>
     </div>
         <div class="list-produk">
             <img src="image/A70.png" alt="Samsung Galaxy A70">
             <h4>Samsung Galaxy Z Flip</h4>
             <h5>Rp 20.000.000,-</h5> 
+            <a href="beranda.jsp?halaman=Zflip">Detail</a>
     </body>
 </html>

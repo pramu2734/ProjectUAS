@@ -62,6 +62,18 @@
                                 <c:when test="${param.halaman=='product'}">
                                 <%@include file="product.jsp" %>
                                 </c:when>
+                                <c:when test="${param.halaman=='A30'}">
+                                <%@include file="A30.jsp" %>
+                                </c:when>
+                                <c:when test="${param.halaman=='M30S'}">
+                                <%@include file="M30S.jsp" %>
+                                </c:when>
+                                <c:when test="${param.halaman=='Note9'}">
+                                <%@include file="Note9.jsp" %>
+                                </c:when>
+                                <c:when test="${param.halaman=='Zflip'}">
+                                <%@include file="Zflip.jsp" %>
+                                </c:when>
                                 <c:otherwise>
                                 <%@include file="home.jsp" %>
                                 </c:otherwise>

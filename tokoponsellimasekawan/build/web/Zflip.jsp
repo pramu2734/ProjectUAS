@@ -1,5 +1,5 @@
 <p style="text-align:justify;">
-    <img src="image/foto/Zflip.jpeg" alt="Samsung Galaxy Z flip">
+    <img src="image/foto/zflip.jpeg" alt="Samsung Galaxy Z flip">
     <br>
 <p style="text-align: center; font-size: 20px;">
     Samsung Galaxy Z Flip

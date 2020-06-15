@@ -1,5 +1,5 @@
 <p style="text-align:justify;">
-    <img src="image/A50S.png" alt="Samsung Galaxy A50S">
+    <img src="image/foto/Note.jpeg" alt="Samsung Galaxy Note 9">
     <br>
 <p style="text-align: center; font-size: 20px;">
     Samsung galaxy Note 9
@@ -15,9 +15,9 @@ Samsung Galaxy Note 9 merupakan handphone HP dengan kapasitas 4000mAh dan layar 
     <br>
 <p style="text-align: center; font-size: 20px;">
 <tr>
-    <td colspan="3"><button class="btn"><a href="beranda.jsp?halaman=pesan">add to order now</a></button></tr>
+    <td colspan="3"><button class="btn"><a href="beranda.jsp?halaman=pesan">Buy</a></button></tr>
 <p style="text-align: center; font-size: 20px;">
 <tr>
-    <td colspan="3"><a href="beranda.jsp?halaman=Product.jsp">Kembali</a></td>
+    <td colspan="3"><a href="beranda.jsp?halaman=Product.jsp">Back</a></td>
 <tr>
 

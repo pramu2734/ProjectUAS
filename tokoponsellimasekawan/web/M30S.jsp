@@ -1,5 +1,5 @@
 <p style="text-align:justify;">
-    <img src="image/A50.png" alt="Samsung Galaxy A50">
+    <img src="image/foto/M30s.jpeg" alt="Samsung Galaxy M30S">
     <br>
 <p style="text-align: center; font-size: 20px;">
     Samsung galaxy M30S
@@ -29,9 +29,9 @@ Varian warna: Opal Black, Sapphire Blue, Pearl White.
     <br>
 <p style="text-align: center; font-size: 20px;">
 <tr>
-    <td colspan="3"><button class="btn"><a href="beranda.jsp?halaman=pesan">add to order now</a></button></tr>
+    <td colspan="3"><button class="btn"><a href="beranda.jsp?halaman=pesan">Buy</a></button></tr>
 <p style="text-align: center; font-size: 20px;">
 <tr>
-    <td colspan="3"><a href="beranda.jsp?halaman=Product.jsp">Kembali</a></td>
+    <td colspan="3"><a href="beranda.jsp?halaman=Product.jsp">Back</a></td>
 <tr>
 

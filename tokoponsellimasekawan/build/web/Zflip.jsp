@@ -1,5 +1,5 @@
 <p style="text-align:justify;">
-    <img src="image/A70.png" alt="Samsung Galaxy A70">
+    <img src="image/foto/zflip.jpeg" alt="Samsung Galaxy Z flip">
     <br>
 <p style="text-align: center; font-size: 20px;">
     Samsung Galaxy Z Flip
@@ -15,9 +15,9 @@
     <br>
 <p style="text-align: center; font-size: 20px;">
 <tr>
-    <td colspan="3"><button class="btn"><a href="beranda.jsp?halaman=pesan">add to order now</a></button></tr>
+    <td colspan="3"><button class="btn"><a href="beranda.jsp?halaman=pesan">Buy</a></button></tr>
 <p style="text-align: center; font-size: 20px;">
 <tr>
-    <td colspan="3"><a href="beranda.jsp?halaman=Product.jsp">Kembali</a></td>
+    <td colspan="3"><a href="beranda.jsp?halaman=Product.jsp">Back</a></td>
 <tr>
 

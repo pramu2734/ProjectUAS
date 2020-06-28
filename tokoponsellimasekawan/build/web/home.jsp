@@ -14,9 +14,5 @@
         Your Mobile device could be the secret weapon your gaming needs.<br>
         <h2>Health</h2>
         For a happy and healthy connected life.
-        <h2>List Product</h2>
-        <ul>
-        <li><a href="beranda.jsp?halaman=product">Detail</a></li>
-            </ul>
     </div>
 </div>

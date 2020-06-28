@@ -1,5 +1,5 @@
 <p style="text-align:justify;">
-    <img src="image/A30.png" alt="Samsung Galaxy A30"> style="float:left; margin: 10px 20px 5px 10px;" width="50%" height="50%"/>
+    <img src="image/foto/A30.jpeg" alt="Samsung Galaxy A30">
     <br>
 <p style="text-align: center; font-size: 20px;">
     Samsung galaxy A30
@@ -29,10 +29,9 @@
     <br>
 <p style="text-align: center; font-size: 20px;">
 <tr>
-    <td colspan="3"><button class="btn"><a href="beranda.jsp?halaman=pesan">add to order now</a></button>
-</tr>
+    <td colspan="3"><button class="btn"><a href="beranda.jsp?halaman=pesan">Buy</a></button></tr>
 <p style="text-align: center; font-size: 20px;">
 <tr>
-    <td colspan="3"><a href="beranda.jsp?halaman=">Kembali ke Menu</a></td>
+    <td colspan="3"><a href="beranda.jsp?halaman=Product.jsp">Back</a></td>
 <tr>
 

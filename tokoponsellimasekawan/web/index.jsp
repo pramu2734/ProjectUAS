@@ -3,43 +3,89 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Halaman Login</title>
-        <style type="text/css">
-            html, body {
-                width: 100%;
-            }
-            table{
-                margin: 0 auto;
-            }
-            h1{
-                text-align: center;
-            }
-        </style>
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="css/csslogin.css.jsp">
     </head>
+        <style>
+     body{
+	font-family: sans-serif;
+	
+        }
+        .tulisan_login{
+                text-align: center;
+                text-transform: uppercase;
+        }
+        .kotak_login{
+                width: 350px;
+                background-color: white;
+                margin: 80px auto;
+                padding: 30px 20px;
+                opacity: 0.9;
+                box-shadow: 0px 0px 20px 6px;  
+                border-radius: 10px;
+        }
+        label{
+                font-size: 11pt;
+        }
+
+        .form_login{
+                box-sizing: border-box;
+                width: 100%;
+                padding: 10px;
+                font-size: 11pt;
+                margin-bottom: 20px;
+        }
+        .form_login:hover{
+            background-color: firebrick;
+            outline-style: none; 
+        }
+        .form_login:focus{
+            background-color: lightcoral;
+        }
+        .tombol_login{
+                background-color: firebrick;
+                color: white;
+                font-size: 11pt;
+                width: 48%;
+                border: none;
+                border-radius: 10px;
+                padding: 10px 20px;
+                
+              
+        }
+        .tombol_login:hover{
+            background-color: indianred;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            letter-spacing: 3px;
+            font-size: 10pt;
+        }
+        a:hover{
+            color: darkred;
+            text-decoration: underline;
+        }
+    </style>
+
+       
     <body>
-        <h1>Login</h1>
-        <form method="post" action="Login?proses=login">
-            <table border="1" width="30%" cellpadding="3">
-            <thead>
-            <tr>
-                <th colspan="2">Login Aplikasi</th>
-            </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Username</td>
-                    <td><input type="text" name="username" /></td>
-                </tr>
-                <tr>
-                    <td>Password</td>
-                    <td><input type="password" name="password"/></td>
-                </tr>
-                <tr>
-                    <td><input type="submit" value="Login"/></td>
-                    <td><input type="reset" value="Reset"/></td>
-                </tr>
-            </tbody> 
-        </table>
-    </form>
-</body>
+	<div class="kotak_login">
+            <p class="tulisan_login">Please enter an Account</p>
+		<form method="POST" action="beranda.jsp">
+			<label>Username</label>
+			<input type="text" name="username" class="form_login" placeholder="Username ...">
+
+			<label>Password</label>
+                        <input type="password" name="password" class="form_login" placeholder="Password...">
+
+                        <input type="submit" class="tombol_login" value="Login"/>
+                        <input type="reset" class="tombol_login" value="Reset" />
+			<center>
+                            
+                            <a href="registreasi.jsp">Register Here!!</a>
+			</center>
+		</form>
+	</div>
+    </body>
 </html>

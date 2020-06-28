@@ -126,7 +126,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <input type=\"reset\" class=\"tombol_login\" value=\"Reset\" />\r\n");
       out.write("\t\t\t<center>\r\n");
       out.write("                            \r\n");
-      out.write("                            <a href=\"registreasi.jsp\">Register Here!!</a>\r\n");
+      out.write("                            <a href=\"registrasi.jsp\">Register Here!!</a>\r\n");
       out.write("\t\t\t</center>\r\n");
       out.write("\t\t</form>\r\n");
       out.write("\t</div>\r\n");

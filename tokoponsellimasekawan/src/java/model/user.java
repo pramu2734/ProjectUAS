@@ -1,13 +1,34 @@
 package model;
 
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+import control.koneksi;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class user {
-    String iduser,nmuser,hakakses,password;
+   
+    private String id;
+    private String iduser;
+    private String namauser;
+    private String hakakses;
+    private String password;
+    koneksi db = null;
     
-    public user(String iduser,String nmuser,String hakakses,String password) {
-        this.iduser = iduser;
-        this.nmuser = nmuser;
-        this.hakakses = hakakses;
-        this.password = password;
+    public user (){
+        try {
+            db = new koneksi();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(user.class.getName()).log(Level.SEVERE, null, ex);
+        }
+   }
+   
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        this.id = id;
     }
     
     public String getIduser() {
@@ -18,12 +39,12 @@ public class user {
         this.iduser = iduser;
     }
     
-    public String getNmuser() {
-        return nmuser;
+    public String getNamauser() {
+        return namauser;
     }
     
-    public void setnmuser(String nmuser) {
-        this.nmuser = nmuser;
+    public void setNamauser(String namauser) {
+        this.namauser = namauser;
     }
     
     public String getHakakses() {
@@ -42,35 +63,26 @@ public class user {
         this.password = password;
     }
     
-    public String selectAll() {
-        String sql = "select * from user";
-        return sql;
-    }
-    
-    public String select() {
-        String sql = "select * from user where "
-                +"id_user='"+iduser+"'";
-        return sql;
-    }
-    
-    public String toUpdate() {
-        return "UPDATE user SET " +
-                "nm_user='" + nmuser +
-                "', hak_akses ='" + hakakses +
-                "', pass ='" + password +
-                "' WHERE id_user='" + iduser + "'";
-    }
- 
-    public String toDelete() {
-        return "DELETE FROM user "
-                +"WHERE id_user='" + iduser + "'";
-    }
- 
-    public String toInsert() {
-        return "INSERT INTO user VALUES ('"
-                + iduser + "','"
-                + nmuser + "','"
-                + hakakses + "','"
-                + password + "')";
+    public List LoginUser(String user, String password) {
+        List data = new ArrayList();
+        ResultSet rs = null;
+        try {
+            String sql = "SELECT * FROM user where id_user='" + user + "'"
+                    + "and pass='" + password + "'";
+            rs = db.ambilData(sql);
+            
+            while (rs.next()) {
+                user am = new user();
+                am.setId(rs.getString("id"));
+                am.setIduser(rs.getString("id_user"));
+                am.setPassword(rs.getString("pass"));
+                am.setHakakses(rs.getString("hak_akses"));
+                data.add(am);
+            }
+            db.diskonek(rs);
+        } catch (Exception a) {
+    System.out.println("Terjadi kesalahan cari login user, pada :\n" + a);
+        }
+        return data;
     }
 }

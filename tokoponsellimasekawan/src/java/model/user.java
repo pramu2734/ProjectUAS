@@ -23,6 +23,10 @@ public class user {
             Logger.getLogger(user.class.getName()).log(Level.SEVERE, null, ex);
         }
    }
+
+    public user(String iduser, String nmuser, String hakakses, String password) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
    
     public String getId() {
         return id;
@@ -84,5 +88,17 @@ public class user {
     System.out.println("Terjadi kesalahan cari login user, pada :\n" + a);
         }
         return data;
+    }
+
+    public String toInsert() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String toUpdate() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String toDelete() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

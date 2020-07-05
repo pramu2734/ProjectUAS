@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 public class ServletPembelian extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, ClassNotFoundException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             String no = request.getParameter("no");
@@ -32,7 +32,7 @@ switch(aksi){
                 + kodebarang + "'";
         break;
     case "Simpan":
-        sql = "INSERT INTO pemebelian VALUES ('"
+        sql = "INSERT INTO pembelian VALUES ('"
                 + no + "','"
                 + tgl + "','"
                 + nof + "',"
@@ -74,7 +74,7 @@ if(!aksi.equals("Simpan")) {
     ResultSet rs = kon.ambilData(sql2);
     while(rs.next()){
         //tambahin ini
-        sql = "INSERT INTO pemebelian VALUES('"
+        sql = "INSERT INTO pembelian VALUES('"
                 + no + "','"
                 + tgl + "','"
                 + nof + "',"
@@ -86,7 +86,7 @@ if(!aksi.equals("Simpan")) {
                 + " WHERE kd_brg='"
                 + rs.getString(2) + "'";
         //sampai sini
-        sql2 = "INSERT INTO detail_pemebelian VALUES('"
+        sql2 = "INSERT INTO detail_pembelian VALUES('"
                 + no + "','"
                 + rs.getString(2) + "',"
                 + rs.getString(3) + ","
@@ -108,16 +108,16 @@ if(!aksi.equals("Simpan")) {
         }
     }
 }
-if(!eror)
-    out.print("<script>"
-            + "alert('Data Berhasil di " + aksi + "');"
-            + "window.location='beranda.jsp?halaman=beli';"
-            + "</script>");
-else
-    out.print(sql+" "sql2+"<script>"
-            + "alert('Data Gagal di " + aksi + "');"
-            
-            + "</script>");
+    if(!eror)
+                out.print("<script>"
+                        + "alert('Data Berhasil di " + aksi + "');"
+                        + "window.location='beranda.jsp?halaman=beli';"
+                        + "</script>");
+            else
+                out.print(sql+" "+sql2+"<script>"
+                        + "alert('Data Gagal di " + aksi + "');"
+                        
+                        + "</script>");
     } catch (SQLException ex) {
         Logger.getLogger(ServletPembelian.class.getName()).log(Level.SEVERE, null, ex);
     }
@@ -135,7 +135,11 @@ else
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ServletPembelian.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -149,7 +153,11 @@ else
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ServletPembelian.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**

@@ -83,7 +83,7 @@
                         <input type="reset" class="tombol_login" value="Reset" />
 			<center>
                             
-                            <a href="registreasi.jsp">Register Here!!</a>
+                            <a href="registrasi.jsp">Register Here!!</a>
 			</center>
 		</form>
 	</div>

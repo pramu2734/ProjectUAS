@@ -41,8 +41,8 @@ public class ServletPemesanan extends pesan {
             String aksi3 = request.getParameter("aksi3");
             pemesanan var = new pemesanan(nopesan,tglpesan,kdsupplier,kdbarang,total,qty,subtotal);
             String URL = "beranda.jsp?halaman=pesan&aksi=SIMPAN";
-            if(aksi1 != null){                out.print(super.proses2(var.toInsert(), URL, "TAMBAH"));
-
+            if(aksi1 != null){                
+                out.print(super.proses2(var.toInsert(), URL, "TAMBAH"));
             } else if(aksi2 != null){
                 out.print(super.proses2(var.toDelete(), URL, "HAPUS"));
             } else if(aksi3!= null){

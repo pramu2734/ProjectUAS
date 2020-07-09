@@ -38,18 +38,6 @@
                                 <c:when test="${param.halaman=='home'}">
                                 <%@include file="home.jsp" %>
                                 </c:when>
-                                <c:when test="${param.halaman=='tampilbrg'}">
-                                <%@include file="barang.jsp" %>
-                                </c:when>
-                                <c:when test="${param.halaman=='tampilsup'}">
-                                <%@include file="supplier.jsp" %>
-                                </c:when>
-                                <c:when test="${param.halaman=='tampilakun'}">
-                                <%@include file="akun.jsp" %>
-                                </c:when>
-                                <c:when test="${param.halaman=='tampiluser'}">
-                                <%@include file="user.jsp" %>
-                                </c:when>
                                 <c:when test="${param.halaman=='pesan'}">
                                 <%@include file="pemesanan.jsp" %>
                                 </c:when>
@@ -85,10 +73,6 @@
                 </div>
                 <div id="right_column">
                     <ul>
-                        <li><a href="beranda.jsp?halaman=tampilbrg&aksi=SIMPAN"">Data Barang</a></li>
-                        <li><a href="beranda.jsp?halaman=tampilsup&aksi=SIMPAN">Data Supplier</a></li>
-                        <li><a href="beranda.jsp?halaman=tampilakun&aksi=SIMPAN">Data Akun</a></li>
-                        <li><a href="beranda.jsp?halaman=tampiluser&aksi=SIMPAN">Data User</a></li>
                         <li><a href="beranda.jsp?halaman=pesan">Pemesanan</a></li>
                         <li><a href="beranda.jsp?halaman=returbeli">Retur Pembelian</a></li>
                         <li><a href="beranda.jsp?halaman=beli">Pembelian</a></li>
@@ -111,7 +95,7 @@
                     </marquee>
                 </div>
                 <div class="box">
-                    <div class="subtitle">Contac Person</div>
+                    <div class="subtitle">Contact Person</div>
                     <marquee direction="down" height="200" behavior="alternate">
                         <p>Lima Sekawan Cell<br>
                             Hardiyanti (082325121747)<br>

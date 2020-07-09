@@ -68,18 +68,6 @@ ResultSet qrypemesanan = null;
             <td><input type="submit" value="TAMBAH" name="aksi1"></td>
         </tr>
 </table>
-<h2>Data Supplier</h2>
-Supplier       <select name="supplier">
-    <option value="-1">Pilih Supplier</option>
-    <%
-        rs = kon.stmt.executeQuery("SELECT * from supplier ");
-        while (rs.next()) {
-            supplier.setKodesupp(rs.getString("kd_supp"));
-            supplier.SetNamasupp(rs.getString("nm_supp"));
-    %>
-    <option value="<%=supplier.getKodesupp()%>"><%=supplier.getNamasupp()%></option>
-    <%  } %>
-</select><br><br>
 
 <table width="535" border="1" align="center">
     <tr align="center">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2020 at 10:14 AM
+-- Generation Time: Jul 06, 2020 at 12:39 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -33,6 +33,15 @@ CREATE TABLE `akun` (
   `nm_akun` char(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `akun`
+--
+
+INSERT INTO `akun` (`no_akun`, `nm_akun`) VALUES
+('10001', 'Kas'),
+('10002', 'Bank'),
+('10003', 'Piutang');
+
 -- --------------------------------------------------------
 
 --
@@ -45,6 +54,16 @@ CREATE TABLE `barang` (
   `harga` int(11) NOT NULL,
   `stok` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `barang`
+--
+
+INSERT INTO `barang` (`kd_brg`, `nm_brg`, `harga`, `stok`) VALUES
+('B0001', 'Samsung Galaxy A30', 3000000, 59),
+('B0002', 'Samsung Galaxy M30s', 3700000, 7),
+('B0003', 'Samsung Galaxy Note 9', 8000000, 3),
+('B0004', 'Samsung Galaxy Z Flip', 20000000, 2);
 
 -- --------------------------------------------------------
 
@@ -72,6 +91,20 @@ CREATE TABLE `detail_pembelian` (
   `sub_beli` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `detail_pembelian`
+--
+
+INSERT INTO `detail_pembelian` (`no_beli`, `kd_brg`, `qty_beli`, `sub_beli`) VALUES
+('PB000001', 'B0001', 25, 75000000),
+('PB000001', 'B0001', 2, 6000000),
+('PB000002', 'B0002', 1, 3700000),
+('PB000003', 'B0001', 1, 3000000),
+('PB000003', 'B0001', 1, 3000000),
+('PB000004', 'B0002', 1, 3700000),
+('PB000005', 'B0004', 1, 20000000),
+('PB000001', 'B0001', 1, 3000000);
+
 -- --------------------------------------------------------
 
 --
@@ -85,6 +118,27 @@ CREATE TABLE `detail_pesan` (
   `subtotal` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `detail_pesan`
+--
+
+INSERT INTO `detail_pesan` (`no_pesan`, `kd_brg`, `qty_pesan`, `subtotal`) VALUES
+('', 'B0001', 1, 3000000),
+('', 'B0001', 1, 3000000),
+('', 'B0001', 25, 75000000),
+('', 'B0001', 25, 75000000),
+('', 'B0001', 2, 6000000),
+('', 'B0001', 25, 75000000),
+('', 'B0001', 2, 6000000),
+('', 'B0002', 1, 3700000),
+('', 'B0002', 1, 3700000),
+('PS000001', 'B0001', 1, 3000000),
+('PS000001', 'B0001', 1, 3000000),
+('', 'B0002', 1, 3700000),
+('', 'B0002', 1, 3700000),
+('', 'B0004', 1, 20000000),
+('', 'B0001', 1, 3000000);
+
 -- --------------------------------------------------------
 
 --
@@ -97,6 +151,13 @@ CREATE TABLE `detail_retur` (
   `qty_retur` int(11) NOT NULL,
   `sub_retur` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `detail_retur`
+--
+
+INSERT INTO `detail_retur` (`no_retur`, `kd_brg`, `qty_retur`, `sub_retur`) VALUES
+('', 'B0001', 1, 3000000);
 
 -- --------------------------------------------------------
 
@@ -112,6 +173,24 @@ CREATE TABLE `jurnal` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `login_admin`
+--
+
+CREATE TABLE `login_admin` (
+  `username` varchar(25) DEFAULT NULL,
+  `password` varchar(25) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `login_admin`
+--
+
+INSERT INTO `login_admin` (`username`, `password`) VALUES
+('admin', 'admin');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pembelian`
 --
 
@@ -122,6 +201,13 @@ CREATE TABLE `pembelian` (
   `total_beli` int(11) NOT NULL,
   `no_pesan` char(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pembelian`
+--
+
+INSERT INTO `pembelian` (`no_beli`, `tgl_beli`, `no_faktur`, `total_beli`, `no_pesan`) VALUES
+('PB000001', '2020-07-05', 'FK000001', 1, 'PS000001');
 
 -- --------------------------------------------------------
 
@@ -139,6 +225,54 @@ CREATE TABLE `pemesanan` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `produk`
+--
+
+CREATE TABLE `produk` (
+  `id_produk` int(11) NOT NULL,
+  `Kd_produk` varchar(25) NOT NULL,
+  `Nm_produk` varchar(25) NOT NULL,
+  `Harga_produk` varchar(25) NOT NULL,
+  `Qty` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `produk`
+--
+
+INSERT INTO `produk` (`id_produk`, `Kd_produk`, `Nm_produk`, `Harga_produk`, `Qty`) VALUES
+(22, 'B0001', 'Samsung Galaxy A30', '3000000', '10'),
+(24, 'B0002', 'Samsung Galaxy M30s', '3700000', '10'),
+(25, 'B0003', 'Samsung Galaxy Note 9', '8000000', '10'),
+(26, 'B0004', 'Samsung Galaxy Z Flip', '20000000', '10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `registrasi`
+--
+
+CREATE TABLE `registrasi` (
+  `password` varchar(25) DEFAULT '10',
+  `email` varchar(25) DEFAULT '10',
+  `kontak` varchar(25) DEFAULT '10',
+  `alamat` varchar(30) DEFAULT '10',
+  `status` varchar(20) DEFAULT '10',
+  `regdate` time DEFAULT '00:00:20',
+  `id` int(11) DEFAULT '7',
+  `username` varchar(25) DEFAULT '10'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `registrasi`
+--
+
+INSERT INTO `registrasi` (`password`, `email`, `kontak`, `alamat`, `status`, `regdate`, `id`, `username`) VALUES
+('12345678', 'pramust05@gmail.com', '082226590037', 'Jakarta', 'Toko', '00:00:00', 7, 'Pramu');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `retur_beli`
 --
 
@@ -147,6 +281,13 @@ CREATE TABLE `retur_beli` (
   `tgl_retur` date NOT NULL,
   `total_retur` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `retur_beli`
+--
+
+INSERT INTO `retur_beli` (`no_retur`, `tgl_retur`, `total_retur`) VALUES
+('', '2020-06-15', 3000000);
 
 -- --------------------------------------------------------
 
@@ -187,6 +328,13 @@ CREATE TABLE `supplier` (
   `telpon` char(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `supplier`
+--
+
+INSERT INTO `supplier` (`kd_supp`, `nm_supp`, `alamat`, `telpon`) VALUES
+('S0001', 'PT. Sejahtera', 'Jakarta', '02187654321');
+
 -- --------------------------------------------------------
 
 --
@@ -194,11 +342,19 @@ CREATE TABLE `supplier` (
 --
 
 CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
   `id_user` char(5) NOT NULL,
   `nm_user` char(20) NOT NULL,
   `hak_akses` char(7) NOT NULL,
   `pass` char(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `id_user`, `nm_user`, `hak_akses`, `pass`) VALUES
+(1, 'USR01', 'admin', 'admin', '12345678');
 
 --
 -- Indexes for dumped tables
@@ -247,6 +403,12 @@ ALTER TABLE `pemesanan`
   ADD PRIMARY KEY (`no_pesan`);
 
 --
+-- Indexes for table `produk`
+--
+ALTER TABLE `produk`
+  ADD PRIMARY KEY (`id_produk`);
+
+--
 -- Indexes for table `retur_beli`
 --
 ALTER TABLE `retur_beli`
@@ -262,7 +424,23 @@ ALTER TABLE `supplier`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id_user`);
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `produk`
+--
+ALTER TABLE `produk`
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
